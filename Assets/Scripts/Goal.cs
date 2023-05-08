@@ -1,8 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Goal : MonoBehaviour
 {
+	public UnityEvent OnBallGoalEnter = new UnityEvent();
 	private void OnTriggerEnter (Collider other) {
-		Debug.Log("GOAL");
+        if (other.CompareTag("Ball"))
+        {
+			OnBallGoalEnter.Invoke ();
+		}
     }
 }
