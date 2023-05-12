@@ -76,6 +76,6 @@ public class PlayManager : MonoBehaviour
 	}
 
 	public void UpdateShootCount(int shootCount) {
-		shootCountText.text = shootCount.ToString();
+		shootCountText.text = "Shoot Count = " + shootCount.ToString();
 	}
 }

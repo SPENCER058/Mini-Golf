@@ -1238,6 +1238,9 @@ MonoBehaviour:
   force: 100
   aimLine: {fileID: 1854493338}
   aimWorld: {fileID: 377462940}
+  onBallShooted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!96 &1078433133
 TrailRenderer:
   serializedVersion: 2
@@ -2000,6 +2003,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballController: {fileID: 1078433132}
   camController: {fileID: 1554581807}
+  finishWindow: {fileID: 0}
+  finishText: {fileID: 0}
+  shootCountText: {fileID: 0}
 --- !u!1 &1732759668
 GameObject:
   m_ObjectHideFlags: 0
