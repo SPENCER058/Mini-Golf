@@ -47,10 +47,12 @@ public class BallController : MonoBehaviour, IPointerDownHandler
 				var moveViewportPos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
 				var ballViewportPos = Camera.main.WorldToViewportPoint(this.transform.position);
 				var pointerDirection = ballViewportPos - moveViewportPos;
+
 				pointerDirection.z = 0;
 				pointerDirection.z *= Camera.main.aspect;
 				pointerDirection.z =Mathf.Clamp(pointerDirection.z, 0.5f, 0.5f);
-				forceFactor = pointerDirection.magnitude * 2;
+				forceFactor = Mathf.Clamp(pointerDirection.magnitude, 0.0f, 1.0f);
+
 
 				//aim visual
 				aimWorld.transform.position = this.transform.position;
@@ -74,7 +76,7 @@ public class BallController : MonoBehaviour, IPointerDownHandler
 
 				shoot = true;
 				shootingMode = false;
-				//aimLine.gameObject.SetActive(false);
+				aimLine.gameObject.SetActive(false);
 				aimWorld.gameObject.SetActive(false);
 			}
 		}
@@ -83,14 +85,14 @@ public class BallController : MonoBehaviour, IPointerDownHandler
 	private void FixedUpdate () {
 		if (shoot) {
 			shoot = false;
-			rb.AddForce(forceDirection * force * forceFactor, ForceMode.Impulse);
+			AddForce(forceDirection * force * forceFactor, ForceMode.Impulse);
 			shootCount += 1;
 			onBallShooted.Invoke(shootCount);
 		}
 
-		if (rb.velocity.sqrMagnitude < 0.01f && rb.velocity.sqrMagnitude != 0) {
+		if (rb.velocity.sqrMagnitude < 0.01f && rb.velocity.sqrMagnitude > 0) {
 			rb.velocity = Vector3.zero;
-			rb.useGravity = true;
+			rb.useGravity = false;
 		}
 	}
 
