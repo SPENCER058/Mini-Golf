@@ -2258,6 +2258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 7128683324832276958, guid: 7517cb5cd1adada44a91f8fef203d0c5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7517cb5cd1adada44a91f8fef203d0c5, type: 3}
 --- !u!1001 &7320230053313892289
@@ -2438,15 +2442,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797216351705896204, guid: 32f9cb0ec3ad83c4a9131a3de0b91d0c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.09853762
+      value: 0.098537646
       objectReference: {fileID: 0}
     - target: {fileID: 7797216351705896204, guid: 32f9cb0ec3ad83c4a9131a3de0b91d0c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -3.800031e-15
+      value: 0.000000030570025
       objectReference: {fileID: 0}
     - target: {fileID: 7797216351705896204, guid: 32f9cb0ec3ad83c4a9131a3de0b91d0c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 2.2263385e-16
+      value: -0.0000000030270297
       objectReference: {fileID: 0}
     - target: {fileID: 7797216351912097221, guid: 32f9cb0ec3ad83c4a9131a3de0b91d0c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2454,11 +2458,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797216351912097221, guid: 32f9cb0ec3ad83c4a9131a3de0b91d0c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000008751377
+      value: 0.000000008751377
       objectReference: {fileID: 0}
     - target: {fileID: 7797216351912097221, guid: 32f9cb0ec3ad83c4a9131a3de0b91d0c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 5.464869e-10
+      value: -5.464869e-10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32f9cb0ec3ad83c4a9131a3de0b91d0c, type: 3}
